@@ -1,4 +1,3 @@
-
 // A Simple Random Number Generator
 
 function generator() {
@@ -28,9 +27,13 @@ function generator() {
           } else if (valueconv > value2conv) {
 
             vex.dialog.alert("You provided a higher low number! Please provide a low and high numbers correctly!");
+          } else if (isNaN(valueconv) || isNaN(valueconv2)) {
+
+            vex.dialog.alert("Both fields should be provided with numbers.Please try again.");
           } else {
 
-            vex.dialog.alert("You provided a wrong Number! Please try again.");
+            vex.dialog.alert("You entered a false number or value. Please try again.");
+
           }
         }
       });
@@ -42,5 +45,3 @@ vex.dialog.alert({
   message: "Welcome to the Random Number Generator",
   callback: generator
 });
-
-
