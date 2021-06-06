@@ -7,22 +7,70 @@
     <script>vex.defaultOptions.className = 'vex-theme-os'</script>
     <link rel="stylesheet" href="css/vex.css" />
     <link rel="stylesheet" href="css/vex-theme-os.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <div>
+      <nav class="navbar navbar-expand-md navbar-dark mb-4">
+        <!-- <img src="/Aci.page.img/logo.png" height="30" alt="Logo" style="position: absolute; top: 14px; left: 20px" /> -->
+        <a class="navbar-brand" href="#">Zufaelliges Zebra</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </nav>
+    </div>
     <main>
 
-      <main class="container" style="margin-top: 100px;">
-        <button id="randomNumber">
-            <p> Enter to get a random Number!</p>
-        </button>
-        <button id="randomPassword">
-          <p>Give me a random Passowrd</p>
-        </button>
-    </main>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          <div class="glassbox">
+            Password Generator
+          </div>
+          <div class="form-group"> 
+            <br>
+            <textarea class="form-control glassbox consolefont" id="passwordArea" rows="10"></textarea>
+          </div>
+          <label>Password Length (8-16)</label>
+          <div class="row">
+            <div class="col-sm">
+              <input type="number" class="glassbox" id="passwordlength" value="8" min="8" max="18"> 
+            </div>
+              <div class="col-sm">
+              <input class="btn glassbox" type="button" value="Generate" id="generatePasswords">
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="glassbox">
+            Random Number Generator
+          </div>
+          <div class="form-group"> 
+            <br>
+            <textarea class="form-control glassbox" id="randomNumberArea" rows="10"></textarea>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="glassbox">
+            Funny Animal Name Generator
+          </div>
+          <div class="form-group"> 
+            <br>
+            <textarea class="form-control glassbox" id="animalNameArea" rows="10"></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="./js/libs/jquery-3.6.0.min.js"></script>
+    <script src="./js/libs/popper.min.js"></script>
+    <script src="./js/libs/bootstrap.min.js"></script>
     <script src="js/RandomNumbers/UiWorkflowProcessor.js"></script>
     <script src="js/RandomNumbers/randomNumberGenerator.js"></script>
-    <script src="js/RandomNumbers/randomNumberBetweenTwoNumbers.js"></script>   
+    <script src="js/RandomNumbers/randomNumberBetweenTwoNumbers.js"></script>
+    <script src="js/RandomPasswords/randomPasswordGenerator.js"></script>
     <script src="js/main.js"></script>   
         
   </body>
