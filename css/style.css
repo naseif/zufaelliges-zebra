@@ -1,32 +1,47 @@
 body {
-    background: rgb(2,0,36);
-    background: linear-gradient(213deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 20%, rgba(0,212,255,1) 81%); 
-    color:white;
-    font-family: Verdana, "Lucida Sans Unicode", sans-serif;
-    text-align:center;
-    /* margin-top: 400px; */
-    height: 100vh;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    213deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 20%,
+    rgba(0, 212, 255, 1) 81%
+  );
+  color: white;
+  font-family: Verdana, "Lucida Sans Unicode", sans-serif;
+  text-align: center;
+  /* margin-top: 400px; */
+  height: 100vh;
 }
 
-.navbar{
-    background-color: rgba(140, 140, 255, 0.2);
-} 
+.navbar {
+  background-color: rgba(140, 140, 255, 0.2);
+}
 
-.navbar-brand{
-    background-color: rgba(140, 140, 255, 0.5);
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 10px;
-    font-size: 14px;
-} 
+.navbar-brand {
+  background-color: rgba(140, 140, 255, 0.5);
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  font-size: 14px;
+}
 
-.glassbox{
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 10px;
-    width: 100%;
-    color:white;
-} 
+.glassbox {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  width: 105%;
+  color: white;
+  margin-top: 10px;
+}
 
-.consolefont{
-    font-family: 'Courier New', Courier, monospace;
-} 
+.consolefont {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.btn-gen {
+  margin-top: 6px;
+}
+
+.btn-roll {
+  width: 40%;
+  margin-top: 20px;
+}
