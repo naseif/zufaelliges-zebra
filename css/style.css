@@ -10,7 +10,8 @@ body {
   font-family: Verdana, "Lucida Sans Unicode", sans-serif;
   text-align: center;
   /* margin-top: 400px; */
-  height: 100vh;
+  /* height: 100vh; */
+  min-height: 100vh;
 }
 
 .navbar {

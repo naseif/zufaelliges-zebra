@@ -20,25 +20,10 @@
     </div>
     <main>
 
-    <div class="container">
+    <div class="container" id="app">
       <div class="row">
         <div class="col-sm">
-          <div class="glassbox">
-            Password Generator
-          </div>
-          <div class="form-group"> 
-            <br>
-            <textarea class="form-control glassbox consolefont" id="passwordArea" rows="10"></textarea>
-          </div>
-          <label>Password Length (8-16)</label>
-          <div class="row">
-            <div class="col-sm">
-              <input type="number" class="glassbox" id="passwordlength" value="8" min="8" max="18"> 
-            </div>
-              <div class="col-sm">
-              <input class="btn glassbox btn-gen" type="button" value="Generate" id="generatePasswords">
-            </div>
-          </div>
+          <password-generator></password-generator>
         </div>
         <div class="col-sm">
           <div class="glassbox">
@@ -75,6 +60,8 @@
     <script src="./js/libs/bootstrap.min.js"></script>
     <script src="js/RandomNumbers/randomNumberGenerator.js"></script>
     <script src="js/RandomPasswords/randomPasswordGenerator.js"></script>
+    <script src="js/libs/vue.js"></script>
+    <script src="js/RandomPasswords/randomPasswordGeneratorVueComponent.js"></script>
     <script src="js/main.js"></script>   
         
   </body>

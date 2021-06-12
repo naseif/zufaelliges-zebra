@@ -19,11 +19,11 @@ function RandomPasswordGenerator(passwordlength) {
 }
 
 function GenerateABunchOfRandomPasswords(howMany, passwordlength) {
-  let result = "";
+  let result = [];
 
   for (let i = 0; i < howMany; i++) {
-    result += RandomPasswordGenerator(passwordlength) + "\n\n";
+    result.push(RandomPasswordGenerator(passwordlength));
   }
 
-  return result.trim();
+  return result;
 }
