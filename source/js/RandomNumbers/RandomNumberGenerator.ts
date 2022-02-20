@@ -3,7 +3,7 @@
  *
  */
 
-function GenerateRandomNumbersInUi() {
+export function GenerateRandomNumbersInUi() {
   let lowestNum = Number($("#lowestNumber").val());
   let highestNum = Number($("#highestNumber").val());
   let randomTextArea = $("#randomNumberArea");
