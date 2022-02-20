@@ -5,17 +5,25 @@ import { IRandomGenerator } from "../Interfaces/IRandomGenerator";
  */
 
 export class RandomNumberGenerator implements IRandomGenerator {
-  generate(minimum: number, maximum: number): string | number {
-    if (minimum < 0 || maximum < 0) {
+  _minimum: number;
+  _maximum: number;
+
+  constructor(minimum: number, maximum: number) {
+    this._minimum = minimum;
+    this._maximum = maximum;
+  }
+
+  generate(): string | number {
+    if (this._minimum < 0 || this._maximum < 0) {
       throw new Error("The Minimum or Maximum numbers can not be negative");
     }
 
-    if (minimum > maximum) {
+    if (this._minimum > this._maximum) {
       throw new Error(
         "The Minimum number can not be bigger than the maximum number!"
       );
     }
 
-    return Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+    return Math.floor(Math.random() * (this._maximum - this._minimum + 1)) + this._minimum;
   }
 }
