@@ -5,6 +5,14 @@
  * Anyways, I forgot what I wanted to type ... and say ... amum aah, ok, line 7..
  */
 
+import { IRandomGenerator } from "../Interfaces/IRandomGenerator";
+
+export class RandomPasswordGenerator implements IRandomGenerator {
+  generate(minimum: number, maximum: number): string | number {
+    throw new Error("Method not implemented.");
+  }
+}
+
 function RandomPasswordGenerator(passwordlength) {
   const validCharacters =
     "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890?!$";
