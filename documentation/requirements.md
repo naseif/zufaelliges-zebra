@@ -1,7 +1,7 @@
 ## Requirements
 
-- [ ] (R001) There is an easy way to grab a random number between 1 and 10
-- [ ] (R002) There is a way to grab a random number between 2 given numbers
+- [X] (R001) There is an easy way to grab a random number between 1 and 10
+- [X] (R002) There is a way to grab a random number between 2 given numbers
 - [ ] (R003) There is a way to request a newly generated password
   - [ ] (R004) with a configurable amount of special characters
   - [ ] (R005) of a configurable length
