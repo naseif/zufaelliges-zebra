@@ -7,7 +7,7 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx nyc npx ts-mocha -p ./tsconfig.json source/**/*.spec.ts"
   },
   "repository": {
     "type": "git",
@@ -19,11 +19,33 @@
     "url": "https://github.com/naseif/zufaelliges-zebra/issues"
   },
   "homepage": "https://github.com/naseif/zufaelliges-zebra#readme",
+  "nyc": {
+    "extends": "@istanbuljs/nyc-config-typescript",
+    "check-coverage": true,
+    "all": true,
+    "include": [
+      "source/**/!(*.spec.*).[tj]s?(x)"
+    ],
+    "exclude": [
+      "src/_tests_/**/*.*"
+    ],
+    "reporter": [
+      "html",
+      "lcov",
+      "text",
+      "text-summary"
+    ],
+    "report-dir": "coverage"
+  },
   "devDependencies": {
+    "@istanbuljs/nyc-config-typescript": "^1.0.2",
     "@types/expect": "^24.3.0",
     "@types/mocha": "^9.1.0",
     "mocha": "^9.2.1",
+    "nyc": "^15.1.0",
+    "source-map-support": "^0.5.21",
     "ts-mocha": "^9.0.2",
+    "ts-node": "^10.5.0",
     "typescript": "^4.5.5"
   }
 }

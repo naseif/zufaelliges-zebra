@@ -3,14 +3,13 @@ import { IRandomGenerator } from "../Interfaces/IRandomGenerator";
 import { RandomNumberGenerator } from "./RandomNumberGenerator";
 
 describe("RandomNumberGenerator", () => {
-
-  function CreateGenerator(minimum : number, maximum : number) : IRandomGenerator {
+  function CreateGenerator(minimum: number, maximum: number): IRandomGenerator {
     return new RandomNumberGenerator(minimum, maximum);
   }
 
   describe("when called with min and max", () => {
     it("should return a number between min and max", () => {
-      const random = CreateGenerator(900,1000);
+      const random = CreateGenerator(900, 1000);
       const r = random.generate();
       expect(r).toBeLessThanOrEqual(1000);
       expect(r).toBeGreaterThanOrEqual(900);

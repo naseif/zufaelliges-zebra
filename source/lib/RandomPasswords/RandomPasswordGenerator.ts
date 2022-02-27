@@ -8,14 +8,15 @@
 import { IRandomGenerator } from "../Interfaces/IRandomGenerator";
 
 export class RandomPasswordGenerator implements IRandomGenerator {
-  passwordlength : number;
+  passwordlength: number;
 
-  constructor(passwordlength : number) {
+  constructor(passwordlength?: number) {
     this.passwordlength = passwordlength || 10;
   }
 
-  generate(): string | number {
-    const validCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890?!$";
+  generate(): any {
+    const validCharacters =
+      "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890?!$";
     const maximalLength = this.passwordlength;
     let result = "";
 
@@ -27,4 +28,3 @@ export class RandomPasswordGenerator implements IRandomGenerator {
     return result;
   }
 }
-

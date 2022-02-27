@@ -13,7 +13,7 @@ export class RandomNumberGenerator implements IRandomGenerator {
     this._maximum = maximum;
   }
 
-  generate(): string | number {
+  generate(): any {
     if (this._minimum < 0 || this._maximum < 0) {
       throw new Error("The Minimum or Maximum numbers can not be negative");
     }
@@ -24,6 +24,9 @@ export class RandomNumberGenerator implements IRandomGenerator {
       );
     }
 
-    return Math.floor(Math.random() * (this._maximum - this._minimum + 1)) + this._minimum;
+    return (
+      Math.floor(Math.random() * (this._maximum - this._minimum + 1)) +
+      this._minimum
+    );
   }
 }

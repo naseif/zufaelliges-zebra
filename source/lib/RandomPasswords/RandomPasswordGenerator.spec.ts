@@ -31,5 +31,4 @@ describe("RandomPasswordGenerator", () => {
       expect(result1.length).toBe(18);
     });
   });
-
 });

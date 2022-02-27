@@ -1,2 +1,2 @@
 #!/bin/bash
-npx ts-mocha -p ./tsconfig.json source/**/*.spec.ts
+npx nyc npx ts-mocha -p ./tsconfig.json source/**/*.spec.ts
