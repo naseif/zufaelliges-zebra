@@ -5,7 +5,7 @@ describe("RandomAnimalGenerator", () => {
   describe("when initialized with one option", () => {
     it("returns that option", () => {
       const randomAnimalGenerator = 
-        new RandomAnimalGenerator(["tiger"], (min,max) => 0);
+        new RandomAnimalGenerator(["tiger"], (max) => 0);
 
       const result = randomAnimalGenerator.generate();
 
@@ -16,7 +16,7 @@ describe("RandomAnimalGenerator", () => {
   describe("when the random number generator selects and option that is not part of the animals collection", () => {
     it("throws an error", () => {
       const randomAnimalGenerator = 
-        new RandomAnimalGenerator(["tiger"], (min,max) => 1);
+        new RandomAnimalGenerator(["tiger"], (max) => 1);
 
       expect(() => { randomAnimalGenerator.generate() }).toThrowError();
     });
@@ -27,7 +27,7 @@ describe("RandomAnimalGenerator", () => {
       let randomNumber = 0;
 
       const randomAnimalGenerator = 
-        new RandomAnimalGenerator(["tiger", "elephant"], (min,max) => {
+        new RandomAnimalGenerator(["tiger", "elephant"], (max) => {
           randomNumber += 1;
           return randomNumber-1;
         });
