@@ -21,6 +21,21 @@ describe("RandomAnimalGenerator", () => {
       expect(() => { randomAnimalGenerator.generate() }).toThrowError();
     });
   });
+
+  describe("when the random animal generator has a 2 item collection", () => {
+    it("both items can be returned depending on the random number", () => {
+      let randomNumber = 0;
+
+      const randomAnimalGenerator = 
+        new RandomAnimalGenerator(["tiger", "elephant"], (min,max) => {
+          randomNumber += 1;
+          return randomNumber-1;
+        });
+
+      expect(randomAnimalGenerator.generate()).toBe("tiger");
+      expect(randomAnimalGenerator.generate()).toBe("elephant");
+    });
+  });
 });
 
 
