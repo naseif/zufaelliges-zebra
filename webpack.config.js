@@ -15,6 +15,7 @@ module.exports = {
     ],
   },
   output: {
+    library: 'ZufaelligesZebra',
     filename: "zufaelliges-zebra.bl.js",
     path: path.resolve(__dirname, "dist/"),
   },
