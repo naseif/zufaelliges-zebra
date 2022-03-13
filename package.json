@@ -24,7 +24,7 @@
     "check-coverage": true,
     "all": true,
     "include": [
-      "source/**/!(*.spec.*).[tj]s?(x)"
+      "source-backend/**/!(*.spec.*).[tj]s?(x)"
     ],
     "exclude": [
       "src/_tests_/**/*.*"

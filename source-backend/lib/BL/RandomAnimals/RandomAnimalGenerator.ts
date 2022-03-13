@@ -1,13 +1,12 @@
 import { IRandomGenerator } from "../../Interfaces/IRandomGenerator";
 
 export class RandomAnimalGenerator implements IRandomGenerator {
-    animals : string[] = [];
-    randomNumberGenerator : (max : number) => number;
+    animals: string[] = [];
+    randomNumberGenerator: (max: number) => number;
 
     constructor(
-        animals : string[], 
-        randomNumberGenerator: (max : number) => number) 
-    {
+        animals: string[],
+        randomNumberGenerator: (max: number) => number) {
         this.animals = animals;
         this.randomNumberGenerator = randomNumberGenerator;
     }
@@ -17,7 +16,7 @@ export class RandomAnimalGenerator implements IRandomGenerator {
 
         const randomIndex = this.randomNumberGenerator(max);
 
-        if (randomIndex < 0 || randomIndex > this.animals.length-1) {
+        if (randomIndex < 0 || randomIndex > this.animals.length - 1) {
             throw new Error(`The randomly chosen index was out of our animals collection range. (${randomIndex}`);
         }
 

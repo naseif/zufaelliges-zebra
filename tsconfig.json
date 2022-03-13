@@ -18,5 +18,5 @@
     "skipLibCheck": true,
     "resolveJsonModule": true
   },
-  "include": ["source/**/**/*.ts"]
+  "include": ["source-backend/**/**/*.ts"]
 }
