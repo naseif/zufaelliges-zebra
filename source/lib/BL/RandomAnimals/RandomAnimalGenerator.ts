@@ -1,4 +1,4 @@
-import { IRandomGenerator } from "../Interfaces/IRandomGenerator";
+import { IRandomGenerator } from "../../Interfaces/IRandomGenerator";
 
 export class RandomAnimalGenerator implements IRandomGenerator {
     animals : string[] = [];
