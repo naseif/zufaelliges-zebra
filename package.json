@@ -7,7 +7,8 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "npx nyc npx ts-mocha -p ./tsconfig.json source/**/*.spec.ts"
+    "test": "npx nyc npx ts-mocha -p ./tsconfig.json source/**/*.spec.ts",
+    "build:lib": "npx tsup source-backend/main.ts --dts-resolve"
   },
   "repository": {
     "type": "git",
@@ -46,6 +47,7 @@
     "source-map-support": "^0.5.21",
     "ts-mocha": "^9.0.2",
     "ts-node": "^10.5.0",
+    "tsup": "^5.12.1",
     "typescript": "^4.5.5"
   }
 }
