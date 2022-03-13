@@ -1,4 +1,4 @@
-import { IRandomGenerator } from "../Interfaces/IRandomGenerator";
+import { IRandomGenerator } from "../../Interfaces/IRandomGenerator";
 /***
  * RandomNumberGenerator - Generiert Zufallszahlen basierend auf naja, dem Üblichen
  *

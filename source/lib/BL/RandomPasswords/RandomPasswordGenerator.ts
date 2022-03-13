@@ -5,7 +5,7 @@
  * Anyways, I forgot what I wanted to type ... and say ... amum aah, ok, line 7..
  */
 
-import { IRandomGenerator } from "../Interfaces/IRandomGenerator";
+import { IRandomGenerator } from "../../Interfaces/IRandomGenerator";
 
 export class RandomPasswordGenerator implements IRandomGenerator {
   passwordlength: number;
