@@ -1,5 +1,5 @@
 import expect from "expect";
-import { IRandomGenerator } from "../Interfaces/IRandomGenerator";
+import { IRandomGenerator } from "../../Interfaces/IRandomGenerator";
 import { RandomNumberGenerator } from "./RandomNumberGenerator";
 
 describe("RandomNumberGenerator", () => {
