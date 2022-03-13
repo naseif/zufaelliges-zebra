@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "npx nyc npx ts-mocha -p ./tsconfig.json source/**/*.spec.ts",
-    "build:lib": "npx tsup source-backend/main.ts --dts-resolve"
+    "build:lib": "npx tsup source-backend/zufaelliges-zebra.bl.ts --dts-resolve"
   },
   "repository": {
     "type": "git",
